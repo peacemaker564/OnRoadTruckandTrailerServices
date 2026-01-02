@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>24/7 Mobile Truck & Trailer Repair Regina | On-Road Emergency Service Saskatchewan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="24/7 mobile truck & trailer repair in Regina, SK. Emergency roadside service, winter breakdowns, air system repair. Serving Saskatchewan 300km radius. Call (306) 581-0500 now!">
+  <meta name="keywords" content="truck repair Regina, mobile mechanic Saskatchewan, trailer repair, roadside truck service, emergency truck repair, 24/7 mechanic Regina, semi truck repair, heavy duty repair Saskatchewan">
+  <meta name="author" content="On Road Truck & Trailer Repair">
+  
+  <!-- Local Business Info -->
+  <meta name="geo.region" content="CA-SK">
+  <meta name="geo.placename" content="Regina">
+  <meta name="geo.position" content="50.4452;-104.6189">
+  
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="On Road Truck & Trailer Repair | 24/7 Mobile Service Regina">
+  <meta property="og:description" content="Fast, reliable mobile truck and trailer repair across Saskatchewan. Available 24/7 for emergencies. Call (306) 581-0500">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta property="og:locale" content="en_CA">
+  
+  <!-- Schema.org Structured Data for Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "On Road Truck & Trailer Repair",
+    "description": "24/7 mobile truck and trailer repair service in Regina, Saskatchewan",
+    "image": "https://yourwebsite.com/logo.jpg",
+    "telephone": "+1-306-581-0500",
+    "email": "Onroad815@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2110 Winnipeg St N Shop no. 2",
+      "addressLocality": "Regina",
+      "addressRegion": "SK",
+      "postalCode": "S4K 0A6",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "50.4452",
+      "longitude": "-104.6189"
+    },
+    "url": "https://yourwebsite.com",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "priceRange": "$",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "50.4452",
+        "longitude": "-104.6189"
+      },
+      "geoRadius": "300000"
+    },
+    "serviceType": [
+      "Mobile Truck Repair",
+      "Trailer Repair",
+      "Emergency Roadside Service",
+      "Heavy Duty Vehicle Repair",
+      "24/7 Truck Repair"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "3"
+    }
+  }
+  </script>
+  <style>
+    * { 
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #1f2937;
+      background: linear-gradient(to bottom, #0f172a 0%, #1e293b 50%, #334155 100%);
+      min-height: 100vh;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background: linear-gradient(135deg, #ea580c, #dc2626);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      height: 50px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .top-bar a:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 640px) {
+      .top-bar {
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .top-bar-left {
+        flex-direction: column;
+      }
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95)),
+                  url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      color: #f9fafb;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.4) 100%);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.5), transparent);
+    }
+
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      text-align: left;
+    }
+
+    .hero-logo {
+      flex-shrink: 0;
+    }
+
+    .hero-logo img {
+      width: 180px;
+      height: auto;
+      filter: drop-shadow(0 4px 20px rgba(0,0,0,0.5));
+      animation: fadeInLeft 0.8s ease-out;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+      }
+
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .hero-logo img {
+        width: 140px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    .call-button {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      margin-top: 1.5rem;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3), 0 0 40px rgba(16, 185, 129, 0.2);
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.8s ease-out 0.4s both, pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    .call-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4), 0 0 60px rgba(16, 185, 129, 0.3);
+    }
+
+    .emergency-note {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      color: #94a3b8;
+      animation: fadeInUp 0.8s ease-out 0.6s both;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+      padding: 2.5rem;
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: 1.5rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+    }
+
+    .section.alt {
+      background: linear-gradient(135deg, rgba(240, 253, 244, 0.98), rgba(236, 253, 245, 0.98));
+    }
+
+    .section h2 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #10b981, #059669);
+      border-radius: 2px;
+    }
+
+    .section h3 {
+      color: #1e293b;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      padding: 1.8rem;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, #ffffff, #f8fafc);
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 1rem;
+      padding: 2px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      font-size: 1.15rem;
+      color: #0f172a;
+    }
+
+    .card p {
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    /* City Cards */
+    .city-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1.2rem;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #0f172a;
+      border: 2px solid #10b981;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      background-size: 20px 20px;
+      min-height: 100px;
+    }
+
+    .city-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+      border-color: #059669;
+    }
+
+    .city-icon {
+      font-size: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .city-card span:not(.city-icon) {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Individual city patterns */
+    .city-regina {
+      background: 
+        linear-gradient(45deg, #ecfdf5 25%, transparent 25%),
+        linear-gradient(-45deg, #ecfdf5 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #ecfdf5 75%),
+        linear-gradient(-45deg, transparent 75%, #ecfdf5 75%),
+        linear-gradient(135deg, #d1fae5, #a7f3d0);
+      background-size: 30px 30px;
+      background-position: 0 0, 0 15px, 15px -15px, -15px 0px;
+    }
+
+    .city-moose-jaw {
+      background: 
+        repeating-linear-gradient(45deg, #fef3c7, #fef3c7 10px, #fde68a 10px, #fde68a 20px),
+        linear-gradient(135deg, #fef3c7, #fcd34d);
+    }
+
+    .city-swift-current {
+      background: 
+        radial-gradient(circle at 50% 50%, #ddd6fe 2px, transparent 2px),
+        linear-gradient(135deg, #ede9fe, #c4b5fd);
+      background-size: 25px 25px, 100% 100%;
+    }
+
+    .city-weyburn {
+      background: 
+        linear-gradient(90deg, #fed7aa 1px, transparent 1px),
+        linear-gradient(#fed7aa 1px, transparent 1px),
+        linear-gradient(135deg, #ffedd5, #fdba74);
+      background-size: 20px 20px, 20px 20px, 100% 100%;
+    }
+
+    .city-estevan {
+      background: 
+        repeating-linear-gradient(0deg, #fecaca, #fecaca 5px, #fca5a5 5px, #fca5a5 10px),
+        linear-gradient(135deg, #fee2e2, #fca5a5);
+    }
+
+    .city-yorkton {
+      background: 
+        linear-gradient(135deg, #bfdbfe 25%, transparent 25%),
+        linear-gradient(225deg, #bfdbfe 25%, transparent 25%),
+        linear-gradient(315deg, #bfdbfe 25%, transparent 25%),
+        linear-gradient(45deg, #bfdbfe 25%, transparent 25%),
+        linear-gradient(135deg, #dbeafe, #93c5fd);
+      background-size: 40px 40px;
+      background-position: 0 0, 0 0, 20px 20px, 20px 20px;
+    }
+
+    .city-white-city {
+      background: 
+        radial-gradient(circle at 100% 100%, #e0e7ff 8px, transparent 8px),
+        radial-gradient(circle at 0 0, #e0e7ff 8px, transparent 8px),
+        linear-gradient(135deg, #eef2ff, #c7d2fe);
+      background-size: 30px 30px, 30px 30px, 100% 100%;
+      background-position: 0 0, 15px 15px, 0 0;
+    }
+
+    .city-indian-head {
+      background: 
+        linear-gradient(45deg, transparent 48%, #bbf7d0 48%, #bbf7d0 52%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, #bbf7d0 48%, #bbf7d0 52%, transparent 52%),
+        linear-gradient(135deg, #dcfce7, #86efac);
+      background-size: 25px 25px, 25px 25px, 100% 100%;
+    }
+
+    .bullet-list {
+      padding-left: 1.5rem;
+      list-style: none;
+    }
+
+    .bullet-list li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    .bullet-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .map-placeholder {
+      margin-top: 2rem;
+      padding: 3rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      border-radius: 1rem;
+      border: 2px dashed #10b981;
+      transition: all 0.3s ease;
+    }
+
+    .map-placeholder:hover {
+      background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+      transform: scale(1.02);
+    }
+
+    .map-placeholder a {
+      color: #059669;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .map-placeholder a:hover {
+      color: #047857;
+      text-decoration: underline;
+    }
+
+    .center { 
+      text-align: center;
+    }
+
+    .big-phone {
+      margin: 1.5rem 0;
+    }
+
+    .big-phone a {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #10b981, #059669);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .big-phone a:hover { 
+      transform: scale(1.05);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      color: #cbd5e1;
+      background: rgba(15, 23, 42, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .footer p {
+      margin: 0.5rem 0;
+    }
+
+    .service-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 0.3rem;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .big-phone a {
+        font-size: 1.8rem;
+      }
+      
+      .section {
+        padding: 1.5rem;
+      }
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Loading animation for cards */
+    .card {
+      animation: fadeIn 0.6s ease-out backwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+    .card:nth-child(5) { animation-delay: 0.5s; }
+    .card:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Review Card Styles */
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .reviewer-name {
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 1.05rem;
+    }
+
+    .review-time {
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    .stars {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #fbbf24;
+    }
+
+    .review-text {
+      flex: 1;
+      color: #374151;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .reviewer {
+      font-weight: 600;
+      color: #0f172a;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span style="font-style: italic;">Needs Met.</span>
+    </div>
+    <div>
+       <a href="tel:+13065810500">Call Now: 1-306-581-0500</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-logo">
+        <img src="logo.png.png" alt="On Road Truck & Trailer Repair Logo">
+      </div>
+      
+      <div class="hero-content">
+        <h1>On Road Truck &amp; Trailer Repair</h1>
+
+        <p class="subtitle">24/7 Mobile Truck &amp; Trailer Repair in Saskatchewan</p>
+        <p class="subtitle">Fast on-road and roadside repair for semi trucks, trailers, and fleets</p>
+
+        <a class="call-button" href="tel:+13065810500">Call Now: (306) 581-0500</a>
+
+        <p class="emergency-note">Emergency breakdown service • Serving Regina &amp; up to 300 km radius across Saskatchewan</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="services">
+      <h2>Mobile Truck &amp; Trailer Repair Services</h2>
+      <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+        Our <strong>mechanic service trucks</strong> and <strong>mobile repair units</strong> are custom-designed to meet all your needs. 
+        We pride ourselves on providing professional, reliable service that gets you back on the road fast.
+      </p>
+      <p style="margin-bottom: 2rem;">We provide mobile on-road truck and trailer repair to get drivers back on the road quickly. Our fully equipped service vehicle comes to your location—highway, yard, truck stop, or job site.</p>
+      
+      <h3 style="margin-top: 2rem; font-size: 1.5rem;"> Truck Repair Services</h3>
+      <p style="margin: 0.5rem 0 1.5rem; color: #475569;">Professional mechanic service for all truck types</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Roadside &amp; Emergency Repairs</h3>
+          <p>Mobile service for breakdowns anywhere in Saskatchewan.</p>
+        </div>
+        <div class="card">
+          <h3>No-Start &amp; Winter Service</h3>
+          <p>Battery boost, replacement, starter and alternator repair.</p>
+        </div>
+        <div class="card">
+          <h3>Engine Diagnostics</h3>
+          <p>Fuel system repair, cooling system, belts, hoses and leaks.</p>
+        </div>
+        <div class="card">
+          <h3>Electrical Diagnosis</h3>
+          <p>Electrical fault diagnosis and lighting repairs.</p>
+        </div>
+      </div>
+      
+      <h3 style="margin-top: 2.5rem; font-size: 1.5rem;"> Trailer Repair Services</h3>
+      <p style="margin: 0.5rem 0 1.5rem; color: #475569;">Complete trailer maintenance and emergency repair</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Air System Repair</h3>
+          <p>Air leaks, pressure issues, and frozen airlines.</p>
+        </div>
+        <div class="card">
+          <h3>Brake Service</h3>
+          <p>Brake chambers, slack adjusters, and trailer brake lockups.</p>
+        </div>
+        <div class="card">
+          <h3>Wheel &amp; Suspension</h3>
+          <p>Wheel seal, hub repair, suspension and airbags.</p>
+        </div>
+        <div class="card">
+          <h3>Trailer Electrical</h3>
+          <p>Lighting, wiring and ABS fault diagnosis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="why-us">
+      <h2>Why Choose Us</h2>
+      <ul class="bullet-list">
+        <li><strong>24/7 Emergency roadside service:</strong> Available day or night for breakdowns.</li>
+        <li><strong>Mobile on-road repairs:</strong> We come to your location—highway, yard, or job site.</li>
+        <li><strong>Experienced heavy-duty technician:</strong> Years of hands-on truck and trailer repair.</li>
+        <li><strong>Serving all Saskatchewan:</strong> Up to 300 km radius from Regina.</li>
+        <li><strong>Fast response time:</strong> We know downtime costs money.</li>
+        <li><strong>Fair and transparent pricing:</strong> Honest, straightforward rates.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="area">
+      <h2>Service Area - Saskatchewan On-Road Truck &amp; Trailer Repair</h2>
+      <p>We proudly provide mobile roadside truck and trailer repair across Saskatchewan, serving highways, rural roads, farms, industrial areas, and truck stops within a 300 km radius.</p>
+      
+      <p style="margin-top: 1.5rem;"><strong>Major Service Areas Include:</strong></p>
+      <div class="grid">
+        <div class="card">Regina</div>
+        <div class="card">Moose Jaw</div>
+        <div class="card">Swift Current</div>
+        <div class="card">Weyburn</div>
+        <div class="card">Estevan</div>
+        <div class="card">Yorkton</div>
+        <div class="card">White City</div>
+        <div class="card">Indian Head</div>
+      </div>
+      
+      <p class="center" style="margin-top: 2rem; font-size: 1.1rem;">If you're unsure whether we can reach your location, call us—we'll come to you.</p>
+      <div class="map-placeholder">
+        <p><a href="https://maps.app.goo.gl/nvDj2vcJWBQQ1YAAA?g_st=iw">North, 2110 Winnipeg St N Shop no. 2, Regina, SK S4K 0A6</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <h2>What Our Customers Say</h2>
+      <p style="margin-bottom: 2rem; color: #475569;">Real reviews from real customers across Saskatchewan</p>
+      <div class="grid">
+        <div class="card review-card">
+          <div class="review-header">
+            <div class="reviewer-name">Jagjeet Gill</div>
+            <div class="review-time">4 weeks ago</div>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">Best mechanic in Regina provided me quick service in cold weather. He changed compressor line in too much cold weather.</p>
+        </div>
+        <div class="card review-card">
+          <div class="review-header">
+            <div class="reviewer-name">Lovepreet Dhaliwal</div>
+            <div class="review-time">2 weeks ago</div>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">Excellent service with fair pricing. Fast response and great work despite freezing temperatures. Will definitely use again.</p>
+        </div>
+        <div class="card review-card">
+          <div class="review-header">
+            <div class="reviewer-name">Umair Nawab</div>
+            <div class="review-time">a year ago</div>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">It was wonderful job and rapid service in winter with affordable price</p>
+        </div>
+      </div>
+      <div class="center" style="margin-top: 2rem;">
+        <a href="https://www.google.com/search?q=on+road+truck+trailer+repair+regina" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #10b981, #059669); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; transition: all 0.3s ease;">Leave Us a Google Review</a>
+      </div>
+    </section>
+
+    <section class="section alt" id="about">
+      <h2>About Our Mobile Truck &amp; Trailer Repair Service</h2>
+      <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+        We are a locally owned mobile truck and trailer repair service based in Saskatchewan. With years of hands-on experience, we specialize in on-road emergency repairs, roadside diagnostics, and winter breakdown services.
+      </p>
+      <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+        <strong>Our goal is simple:</strong> Get drivers back on the road safely, quickly, and affordably.
+      </p>
+      <p style="font-size: 1.05rem; line-height: 1.8;">
+        <strong>We work with:</strong> Owner-operators, small fleet companies, independent truckers, and local transport operators who need reliable roadside repair they can count on.
+      </p>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact Us - 24/7 Emergency Service</h2>
+      <p class="center" style="font-size: 1.1rem;">
+        <strong>For immediate roadside assistance, call:</strong>
+      </p>
+      <p class="center big-phone">
+        <a href="tel:+13065810500">(306) 581-0500</a>
+      </p>
+      <div style="text-align: center; margin-top: 2rem;">
+        <span class="service-badge">Regina, Saskatchewan</span>
+        <span class="service-badge">Open 24/7</span>
+        <span class="service-badge">Mobile Service</span>
+      </div>
+      <p class="center" style="margin-top: 2rem;">
+        Or email: <a href="mailto:onroad815@gmail.com" style="color: #10b981; font-weight: 600;">onroad815@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p style="font-size: 1rem; font-weight: 600;">© <span id="year"></span> On Road Truck &amp; Trailer Repair — Regina, SK</p>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: #94a3b8;">
+      Mobile truck repair Regina • 24/7 emergency roadside service • Trailer repair Saskatchewan • Heavy duty mechanic • Winter breakdown service
+    </p>
+    <p style="margin-top: 0.8rem; font-size: 0.85rem; color: #64748b;">
+      Serving: Regina, Moose Jaw, Swift Current, Weyburn, Estevan, Yorkton, White City, Indian Head and surrounding areas
+    </p>
+  </footer>
+
+  <!-- Google Analytics (Add your tracking code here when ready) -->
+  <!-- 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR-GA-ID');
+  </script>
+  -->
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

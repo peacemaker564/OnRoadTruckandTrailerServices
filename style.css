@@ -1,0 +1,91 @@
+:root {
+  --primary-green: #10b981;
+  --emergency-amber: #f59e0b;
+  --deep-slate: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --text-main: #f8fafc;
+  --text-dim: #94a3b8;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--deep-slate);
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Professional Header & Hero */
+.hero {
+  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+              url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=1200'); /* Professional truck backdrop */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 4px solid var(--primary-green);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+
+/* Call to Action - Mature & High Contrast */
+.call-now-btn {
+  display: inline-block;
+  background: var(--emergency-amber);
+  color: var(--deep-slate);
+  padding: 1.25rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+  transition: transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.call-now-btn:hover {
+  transform: scale(1.05);
+  background: #fbbf24;
+}
+
+/* Service Area Section */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--primary-green);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.highlight {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: rgba(0,0,0,0.3);
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
